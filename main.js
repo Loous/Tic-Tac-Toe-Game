@@ -6,21 +6,13 @@ import { ValidateDGRAxis } from "./validations.js";
 import { player } from "./validations2.js";
 import { endGame } from "./validations2.js";
 
-
 const d = document;
 
 const $wrapper = d.querySelectorAll(".wrapper div"),
     $wrapper2 = d.querySelector(".wrapper"),
     $turn = d.querySelector(".turn");
-    
-
-
-
-
 
 function Game(){
-
-
 
     let c = 0,
         c2 = 0;
@@ -31,19 +23,14 @@ function Game(){
         [],
         []
 
-
-
     ]
 
     let s = 0;
 
-    
-
-
     for(let k = 0; k < $wrapper.length; k++){
 
         if(k === 3){
-            s++
+            s++;
 
 
         }
@@ -51,14 +38,9 @@ function Game(){
         if(k > 3 && k % 3 === 0){
             s++
 
-
         }
 
-        
-
-        lista[s].push($wrapper[k])
-
-    
+        lista[s].push($wrapper[k]);    
 
     }
 
@@ -68,8 +50,6 @@ function Game(){
 
     for(let i = 0; i < $wrapper.length; i++){
 
-        
-
         $wrapper[i].addEventListener("click", (e) => {
 
             if($wrapper[i].textContent.length > 0 || c2 === 1){
@@ -78,36 +58,27 @@ function Game(){
 
             }else{
                 
-
                 k2++;
-    
-                let type = ""
-    
-                    
+                let type = "";
     
                 if(c == 0){
                     $wrapper[i].textContent = "X";
                     type = "X";
     
             
-            
                 }else if(c == 1){
                     $wrapper[i].textContent = "O";
                     type = "O";
             
-            
-            
+    
                 }else if(c % 2 === 0){
                     $wrapper[i].textContent = "X";
                     type = "X";
                         
         
-        
-        
                 }else if(c % 2 > 0){
                     $wrapper[i].textContent = "O";
                     type = "O";
-        
         
                 }
     
@@ -120,7 +91,6 @@ function Game(){
     
                     player("X");
     
-                       
     
                 }else if(ValidateXAxis(lista) === "O" || ValidateYAxis(lista) === "O" || ValidateDGAxis(lista) === "O" || ValidateDGRAxis(lista) === "O"){
                         
@@ -135,14 +105,10 @@ function Game(){
     
                     c2 = 1;
     
-    
-    
                 }else{
                         
                     if(type === "X"){
                         $turn.textContent = "Player Turn O";
-                            
-                            
                             
                             
                     }else if(type === "O"){
@@ -156,7 +122,6 @@ function Game(){
                 }
     
                     
-                    
                 if(c2 === 1){ /**We restart the game */
 
                     const $buttonJ = document.querySelector(".buttonJ");
@@ -168,41 +133,32 @@ function Game(){
                         for(let j = 0; j < $wrapper.length; j++){
                             $wrapper[j].textContent = "";
                         
-                        
                         }
                         
                         for(let i = 0; i < lista.length; i++){
-                                lista[i] = [];
+
+                            lista[i] = [];
                         
-                            
                         }
-                        
                                 
                         let s = 0;
                         
                         for(let k = 0; k < $wrapper.length; k++){
                         
                             if(k === 3){
-                                s++
-                        
+                                s++;
                         
                             }
                         
                             if(k > 3 && k % 3 === 0){
-                                s++
+                                s++;
                         
                         
                             }
                         
-                                    
-                        
-                            lista[s].push($wrapper[k])
-                        
-                                
+                            lista[s].push($wrapper[k]);
                         
                         }
-                        
-                        
                         
                         $wrapper2.removeChild($buttonJ);
                         $wrapper2.removeChild($player);
@@ -213,9 +169,7 @@ function Game(){
                         c2 = 0;
                         k2 = 0;
                         s = 0;
-                        
-                                
-                                
+                              
 
                     })
 
@@ -238,20 +192,13 @@ function Game(){
 
             if(e.keyCode === 13){
 
-
-
                 if($wrapper[i].textContent.length > 0 || c2 === 1){
                     return true;
-                
-    
     
                 }else{
 
                     k2++;
-    
-                    let type = ""
-        
-                        
+                    let type = "";
         
                     if(c == 0){
                         $wrapper[i].textContent = "X";
@@ -269,8 +216,6 @@ function Game(){
                         $wrapper[i].textContent = "X";
                         type = "X";
                             
-            
-            
             
                     }else if(c % 2 > 0){
                         $wrapper[i].textContent = "O";
@@ -303,13 +248,10 @@ function Game(){
         
                         c2 = 1;
         
-        
-        
                     }else{
                             
                         if(type === "X"){
                             $turn.textContent = "Player Turn O";
-                                
                                 
                                 
                                 
@@ -339,7 +281,8 @@ function Game(){
                             }
                             
                             for(let i = 0; i < lista.length; i++){
-                                    lista[i] = [];
+
+                                lista[i] = [];
                             
                                 
                             }
@@ -362,13 +305,9 @@ function Game(){
                                 }
                             
                                         
-                            
-                                lista[s].push($wrapper[k])
-                            
-                                    
+                                lista[s].push($wrapper[k]); 
                             
                             }
-                            
                             
                             
                             $wrapper2.removeChild($buttonJ);
@@ -416,83 +355,6 @@ function Game(){
 d.addEventListener("DOMContentLoaded", () => {
     Game();
 
-
-
-
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

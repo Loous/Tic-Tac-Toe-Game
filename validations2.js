@@ -24,11 +24,6 @@ function player(ply){
     $wrapper2.appendChild(x);
     $wrapper2.appendChild(button);
 
-    
-
-
-
-
 }
 
 /**This message appear if the end game */
@@ -45,11 +40,6 @@ function endGame(){
 
     $wrapper2.appendChild(x);
     $wrapper2.appendChild(button);
-
-
-
-
-
 
 }
 
