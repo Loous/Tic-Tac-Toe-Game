@@ -52,10 +52,11 @@ function Game(){
 
         $wrapper[i].addEventListener("click", (e) => {
 
+            
             if($wrapper[i].textContent.length > 0 || c2 === 1){
                 return true;
-
-
+                
+                
             }else{
                 
                 k2++;
