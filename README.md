@@ -1,8 +1,7 @@
 # Tic-Tac-Toe-Game
 
 Tic-Tac-Toe Game
-![game](https://user-images.githubusercontent.com/97409032/148826946-25a97d78-96f7-463d-a5b1-e9a1184a4b9b.PNG)
-
+![tictactoePNG](https://user-images.githubusercontent.com/97409032/151857550-afa97044-11fe-4c6a-8c2c-50cf0300682f.PNG)
 # Contact
 
 leogordon629@gmail.com
